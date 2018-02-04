@@ -11,7 +11,8 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node node_modules/jest/bin/jest.js",
+    "postinstall": "rimraf ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
   },
   "jest": {
     "preset": "react-native"
@@ -19,6 +20,7 @@
   "dependencies": {
     "apisauce": "^0.14.3",
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.0",
     "ramda": "^0.25.0",
     "react": "16.2.0",
     "react-native": "0.52.0",

@@ -8,7 +8,6 @@ import ReduxNavigation from '../Navigation/ReduxNavigation'
 
 // Persist
 import { PersistGate } from 'redux-persist/es/integration/react'
-
 const {store, persistor} = configureStore()
 
 class RootContainer extends Component {
