@@ -1,6 +1,8 @@
-import AppNavigation from '../Navigation/AppNavigation'
+import AppNavigator from '../Navigation/AppNavigation'
 
-export const reducer = (state, action) => {
-  const newState = AppNavigation.router.getStateForAction(action, state)
-  return newState || state
+const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('LaunchScreen'))
+
+export const reducer = (state = initialState, action) => {
+    const newState = AppNavigator.router.getStateForAction(action, state)
+    return newState || state
 }
