@@ -1,13 +1,12 @@
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // default: localStorage if web, AsyncStorage if react-native
-import { seamlessImmutableReconciler, seamlessImmutableTransformer } from 'redux-persist-seamless-immutable'
+import { seamlessImmutableReconciler } from './Transforms/StateReconciler'
 
 const persistConfig = {
     key: 'root',
     storage,
     stateReconciler: seamlessImmutableReconciler,
-    transforms: [seamlessImmutableTransformer]
 }
 
 const RootReducer = combineReducers({
