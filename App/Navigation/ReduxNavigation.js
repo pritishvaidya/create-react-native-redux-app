@@ -12,11 +12,11 @@ const addListener = createReduxBoundAddListener('root')
 // here is our redux-aware our smart component
 function ReduxNavigation (props) {
     const { dispatch, nav } = props
-    const navigation = ReactNavigation.addNavigationHelpers({
+    const navigation = {
         dispatch,
         state: nav,
         addListener
-    })
+    }
 
     return <AppNavigation navigation={navigation} ref={navigatorRef => {
         NavigationService.setTopLevelNavigator(navigatorRef);
